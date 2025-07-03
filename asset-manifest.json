@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/AEAC2025Conference/static/css/main.e3a0c0ed.css",
-    "main.js": "/AEAC2025Conference/static/js/main.beaba2cb.js",
+    "main.css": "/AEAC2025Conference/static/css/main.8aaa6edf.css",
+    "main.js": "/AEAC2025Conference/static/js/main.1458f7ee.js",
     "static/js/453.45f91f96.chunk.js": "/AEAC2025Conference/static/js/453.45f91f96.chunk.js",
+    "static/media/Church.jpg": "/AEAC2025Conference/static/media/Church.ca24f70a3700ca60797a.jpg",
     "index.html": "/AEAC2025Conference/index.html",
-    "main.e3a0c0ed.css.map": "/AEAC2025Conference/static/css/main.e3a0c0ed.css.map",
-    "main.beaba2cb.js.map": "/AEAC2025Conference/static/js/main.beaba2cb.js.map",
+    "main.8aaa6edf.css.map": "/AEAC2025Conference/static/css/main.8aaa6edf.css.map",
+    "main.1458f7ee.js.map": "/AEAC2025Conference/static/js/main.1458f7ee.js.map",
     "453.45f91f96.chunk.js.map": "/AEAC2025Conference/static/js/453.45f91f96.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3a0c0ed.css",
-    "static/js/main.beaba2cb.js"
+    "static/css/main.8aaa6edf.css",
+    "static/js/main.1458f7ee.js"
   ]
 }
