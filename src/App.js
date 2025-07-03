@@ -598,7 +598,7 @@ const ChurchConferenceApp = () => {
           </div>
           <div className="space-y-3">
             {[
-              "Everyone must be in their buildings by 12pm",
+              "Everyone must be in their buildings by 11:59pm",
               "Gym closes at 11:30PM and you must put everything back after use",
               "Clean up after yourself in the cafeteria and Cougar Den",
               "No girls in village F",
