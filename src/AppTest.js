@@ -6,7 +6,6 @@ import {
   ArrowLeft,
   Music,
   ExternalLink,
-  FileText,
 } from "lucide-react";
 import map from "./images/Map.png";
 
@@ -549,21 +548,16 @@ const ChurchConferenceApp = () => {
               Conference Verse
             </h3>
             <div className="text-slate-600 leading-relaxed">
-              <p className="mb-4 font-medium text-lg">
+              <p className="mb-4 font-medium">
                 "That I may know Him and the power of His resurrection, and the
                 fellowship of His sufferings, being conformed to His death"
               </p>
-              <p className="text-blue-500 font-medium mb-4 text-lg">
-                Philippians 3:10
-              </p>
-              <p className="text-right mb-2 text-lg" dir="rtl">
+              <p className="text-blue-500 font-medium mb-4">Philippians 3:10</p>
+              <p className="text-right mb-2" dir="rtl">
                 "لأَعْرِفَهُ، وَقُوَّةَ قِيَامَتِهِ، وَشَرِكَةَ آلاَمِهِ،
                 مُتَشَبِّهاً بِمَوْتِهِ"
               </p>
-              <p
-                className="text-blue-500 font-medium text-right text-lg"
-                dir="rtl"
-              >
+              <p className="text-blue-500 font-medium text-right" dir="rtl">
                 فيلبي ٣: ١٠
               </p>
             </div>
@@ -790,33 +784,6 @@ const ChurchConferenceApp = () => {
                 )}
               </div>
             ))}
-
-            {/* God's Story Link - Only for English Service */}
-            {selectedGroup === "english-service" && (
-              <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-6 border border-purple-100/50 shadow-sm w-full">
-                <div className="text-center w-full">
-                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <FileText className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <h3 className="text-lg font-medium text-purple-700 mb-2">
-                    God's Story
-                  </h3>
-                  <p className="text-slate-600 text-sm mb-4 break-words">
-                    How to tell God's story
-                  </p>
-                  <a
-                    href="https://drive.google.com/file/d/1hthExjgwJrnnbU4IVf0aZqXmjR1RcpT_/view?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 shadow-sm max-w-full"
-                  >
-                    <FileText className="w-5 h-5 mr-2 flex-shrink-0" />
-                    <span className="truncate">View Document</span>
-                    <ExternalLink className="w-4 h-4 ml-2 flex-shrink-0" />
-                  </a>
-                </div>
-              </div>
-            )}
 
             {/* Spotify Playlist */}
             {group.hasSpotify && (
