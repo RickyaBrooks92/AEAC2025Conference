@@ -1,0 +1,333 @@
+:root {
+  --primary-color: #80181a;
+  --primary-light: #a83335;
+  --text-on-primary: #ffffff;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #80181a 0%, #a83335 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  background: var(--primary-color);
+  color: var(--text-on-primary);
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.header::before {
+  content: "📅";
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.header .date {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.header .subtitle {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.theme-section {
+  background: #fff8f8;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.theme-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-title::before {
+  content: "📖";
+}
+
+.theme-text {
+  font-style: italic;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.bible-verse {
+  color: #777;
+  font-size: 14px;
+}
+
+.arabic-text {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 16px;
+  direction: rtl;
+  text-align: right;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 6px;
+  text-align: center;
+  border: 2px solid #e0e6ed;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab.active {
+  background: var(--primary-color);
+  color: var(--text-on-primary);
+  border-color: var(--primary-color);
+}
+
+.tab:hover:not(.active) {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.schedule-content {
+  display: block;
+  padding: 0 20px;
+}
+
+.day-section {
+  background: white;
+  border: 1px solid #e0e6ed;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.day-header {
+  padding: 15px 20px;
+  background: #fff8f8;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.day-header:hover {
+  background: #fdf0f0;
+}
+
+.day-header::before {
+  content: "📅";
+  margin-right: 10px;
+}
+
+.day-header::after {
+  content: "▼";
+  font-size: 12px;
+  margin-left: auto;
+}
+
+.day-section.collapsed .day-header::after {
+  transform: rotate(-90deg);
+}
+
+.day-events {
+  padding: 0;
+  max-height: 1000px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.day-section.collapsed .day-events {
+  max-height: 0;
+}
+
+.event {
+  padding: 12px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: white;
+}
+
+.event-time {
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.event-details {
+  flex: 1;
+}
+
+.event-title {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.event-leader {
+  color: #888;
+  font-size: 13px;
+}
+
+.event-location {
+  color: var(--primary-color);
+  font-size: 13px;
+}
+
+.special-event {
+  border-left: 3px solid var(--primary-light);
+  background: #fff6f6;
+}
+
+.rules-section {
+  margin: 20px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e0e6ed;
+}
+
+.rules-header {
+  background: var(--primary-color);
+  color: var(--text-on-primary);
+  padding: 15px 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rules-header::before {
+  content: "📋";
+}
+
+.rules-list {
+  padding: 20px;
+}
+
+.rule-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+.rule-item:last-child {
+  border-bottom: none;
+}
+
+.rule-number {
+  background: var(--primary-color);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.playlist-section {
+  margin: 20px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-light) 0%,
+    var(--primary-color) 100%
+  );
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.playlist-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.playlist-subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+.spotify-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.spotify-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: #888;
+  font-size: 14px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.organization {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
