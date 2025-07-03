@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/AEAC2025Conference/static/css/main.adcc03d9.css",
+    "main.js": "/AEAC2025Conference/static/js/main.152f5755.js",
+    "static/js/453.45f91f96.chunk.js": "/AEAC2025Conference/static/js/453.45f91f96.chunk.js",
+    "static/media/AEACLogo.png": "/AEAC2025Conference/static/media/AEACLogo.663312ad415ef5c722ae.png",
+    "index.html": "/AEAC2025Conference/index.html",
+    "main.adcc03d9.css.map": "/AEAC2025Conference/static/css/main.adcc03d9.css.map",
+    "main.152f5755.js.map": "/AEAC2025Conference/static/js/main.152f5755.js.map",
+    "453.45f91f96.chunk.js.map": "/AEAC2025Conference/static/js/453.45f91f96.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.adcc03d9.css",
+    "static/js/main.152f5755.js"
+  ]
+}
