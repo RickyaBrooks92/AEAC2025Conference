@@ -94,7 +94,7 @@ export default function EnglishHomePage({ onBack }) {
       </div>
 
       <div className="max-w-md mx-auto px-4 py-4">
-        {/* Navigation Tabs*/}
+        {/* Navigation Tabss*/}
         <div className="mb-6">
           <div className="bg-white rounded-lg shadow-sm p-2">
             {TABS.map((tab) => (
