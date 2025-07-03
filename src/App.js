@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./ConferenceSchedule.css"; // Assuming you have a CSS file for styles
-import { Schedules } from "./helperData/Schedules"; // Adjust the import path as necessary
+import "./ConferenceSchedule.css";
+import { Schedules } from "./helperData/Schedules";
+import ChurchImage from "./helperData/Church.jpg";
 
-const TABS = Object.keys(Schedules);
+// const TABS = Object.keys(Schedules);
 
 const parseArabicEventString = (eventStr) => {
   const parts = eventStr.split(":");
@@ -14,8 +15,6 @@ const parseArabicEventString = (eventStr) => {
       title,
       leader: "",
       location: "",
-      isSpecial:
-        eventStr.includes("سهرة") || eventStr.includes("اطفاء الانوار"),
     };
   }
   return {
@@ -23,21 +22,10 @@ const parseArabicEventString = (eventStr) => {
     title: eventStr,
     leader: "",
     location: "",
-    isSpecial: false,
   };
 };
 
 const parseEventString = (eventStr) => {
-  if (eventStr.includes("Bonfire") || eventStr.includes("Free Time")) {
-    return {
-      time: "",
-      title: eventStr,
-      leader: "",
-      location: "",
-      isSpecial: true,
-    };
-  }
-
   const timeMatch = eventStr.match(
     /^(\d{1,2}(?::\d{2})?(?:AM|PM)?(?:\s*-\s*\d{1,2}(?::\d{2})?(?:AM|PM)?)?)/
   );
@@ -60,14 +48,13 @@ const parseEventString = (eventStr) => {
     title,
     leader,
     location,
-    isSpecial: eventStr.includes("Bonfire") || eventStr.includes("Sahra"),
   };
 };
 
 const ConferenceSchedule = () => {
   const tabOrder = [
-    "جدول الكبار بالعربي", // Arabic
-    "English Adults", // Correct key
+    "جدول الكبار بالعربي",
+    "English Adults",
     "Junior High",
     "Pre-K to 2nd",
   ];
@@ -76,7 +63,6 @@ const ConferenceSchedule = () => {
   const [expandedDays, setExpandedDays] = useState({});
 
   useEffect(() => {
-    // Reset collapsed state on tab change
     setExpandedDays({});
   }, [activeTab]);
 
@@ -111,10 +97,7 @@ const ConferenceSchedule = () => {
                 : parseEventString(eventStr);
 
               return (
-                <div
-                  className={`event ${event.isSpecial ? "special-event" : ""}`}
-                  key={i}
-                >
+                <div className="event" key={i}>
                   <div className="event-time">{event.time}</div>
                   <div className="event-details">
                     <div className="event-title">{event.title}</div>
@@ -138,14 +121,13 @@ const ConferenceSchedule = () => {
 
   return (
     <div className="container">
-      {/* Header */}
-      <div className="header">
+      <div className="header with-image">
+        <img src={ChurchImage} alt="Church Logo" className="church-logo" />
         <h1>Church Conference 2025</h1>
-        <div className="date">July 3-6, 2025</div>
+        <div className="date">July 3–6, 2025</div>
         <div className="subtitle">Arabic Evangelical Alliance Church</div>
       </div>
 
-      {/* Theme */}
       <div className="theme-section">
         <div className="theme-title">Conference Theme</div>
         <div className="theme-text">
@@ -158,7 +140,6 @@ const ConferenceSchedule = () => {
         </div>
       </div>
 
-      {/* Rules */}
       <div className="rules-section">
         <div className="rules-header">Conference Rules</div>
         <div className="rules-list">
@@ -179,7 +160,6 @@ const ConferenceSchedule = () => {
         </div>
       </div>
 
-      {/* Tabs */}
       <div className="tabs">
         {tabOrder.map((tab) => (
           <div
@@ -192,10 +172,8 @@ const ConferenceSchedule = () => {
         ))}
       </div>
 
-      {/* Schedule Content */}
       <div className="schedule-content active">{renderSchedule(activeTab)}</div>
 
-      {/* Playlist Section */}
       <div className="playlist-section">
         <div className="playlist-title">Praise & Worship Playlist</div>
         <div className="playlist-subtitle">
@@ -212,7 +190,6 @@ const ConferenceSchedule = () => {
         </a>
       </div>
 
-      {/* Footer */}
       <div className="footer">
         <div className="organization">Arabic Evangelical Alliance Church</div>
         <div>Michigan Conference 2025</div>

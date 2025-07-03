@@ -28,12 +28,12 @@ body {
   padding: 30px 20px;
 }
 
-.header::before {
+/* .header::before {
   content: "📅";
   font-size: 40px;
   display: block;
   margin-bottom: 10px;
-}
+} */
 
 .header h1 {
   font-size: 24px;
@@ -42,19 +42,21 @@ body {
 }
 
 .header .date {
-  font-size: 16px;
+  font-size: 17px;
+  line-height: 1.6;
   opacity: 0.9;
   margin-bottom: 8px;
 }
 
 .header .subtitle {
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.6;
   opacity: 0.8;
 }
 
 .theme-section {
   background: #fff8f8;
-  margin: 20px;
+  margin: 24px;
   padding: 20px;
   border-radius: 12px;
   border-left: 4px solid var(--primary-color);
@@ -82,14 +84,16 @@ body {
 
 .bible-verse {
   color: #777;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .arabic-text {
   color: var(--primary-color);
   font-weight: 600;
   margin-top: 10px;
-  font-size: 16px;
+  font-size: 17px;
+  line-height: 1.6;
   direction: rtl;
   text-align: right;
 }
@@ -144,7 +148,7 @@ body {
 }
 
 .day-header {
-  padding: 15px 20px;
+  padding: 18px 22px;
   background: #fff8f8;
   cursor: pointer;
   display: flex;
@@ -185,48 +189,52 @@ body {
 }
 
 .event {
-  padding: 12px 20px;
-  border-bottom: 1px solid #f0f0f0;
   display: flex;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: start;
   gap: 12px;
-  background: white;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.event:last-child {
+  border-bottom: none;
 }
 
 .event-time {
-  color: #666;
-  font-size: 14px;
   font-weight: 600;
-  min-width: 80px;
+  color: #444;
+  white-space: nowrap;
+  text-align: right;
 }
 
 .event-details {
-  flex: 1;
+  overflow-wrap: break-word;
 }
 
 .event-title {
-  font-weight: 500;
-  color: #333;
+  font-weight: 600;
+  color: #222;
   margin-bottom: 2px;
 }
 
-.event-leader {
-  color: #888;
-  font-size: 13px;
-}
-
+.event-leader,
 .event-location {
-  color: var(--primary-color);
   font-size: 13px;
+  color: #777;
+  margin-top: 2px;
 }
 
-.special-event {
+/* .special-event {
   border-left: 3px solid var(--primary-light);
   background: #fff6f6;
-}
+} */
 
 .rules-section {
-  margin: 20px;
+  margin: 24px;
   background: white;
   border-radius: 12px;
   border: 1px solid #e0e6ed;
@@ -235,7 +243,7 @@ body {
 .rules-header {
   background: var(--primary-color);
   color: var(--text-on-primary);
-  padding: 15px 20px;
+  padding: 18px 22px;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -253,7 +261,8 @@ body {
 .rule-item {
   padding: 8px 0;
   border-bottom: 1px solid #f0f0f0;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .rule-item:last-child {
@@ -275,7 +284,7 @@ body {
 }
 
 .playlist-section {
-  margin: 20px;
+  margin: 24px;
   background: linear-gradient(
     135deg,
     var(--primary-light) 0%,
@@ -294,7 +303,8 @@ body {
 }
 
 .playlist-subtitle {
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.6;
   opacity: 0.9;
   margin-bottom: 15px;
 }
@@ -303,7 +313,7 @@ body {
   background: rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(255, 255, 255, 0.3);
   color: white;
-  padding: 12px 20px;
+  padding: 16px 20px;
   border-radius: 25px;
   text-decoration: none;
   display: inline-flex;
@@ -322,7 +332,8 @@ body {
   text-align: center;
   padding: 30px 20px;
   color: #888;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.6;
   border-top: 1px solid #f0f0f0;
 }
 
@@ -330,4 +341,27 @@ body {
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 5px;
+}
+
+@media (max-width: 400px) {
+  .event {
+    grid-template-columns: 70px 1fr;
+    gap: 8px;
+  }
+
+  .event-time {
+    font-size: 13px;
+  }
+
+  .event-title {
+    font-size: 14px;
+  }
+}
+
+.church-logo {
+  width: 50%;
+  max-width: 80px; /* optional limit */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto; /* centers the image and adds spacing */
 }

@@ -45,7 +45,7 @@ export const Schedules = {
         "7PM: Dinner - Cougar Den",
         "8:30PM - 9:15PM: Praise and Worship - Band Room",
         "9:15PM - 10PM: First Session (Leaders: Pastor Adam / Pastor Khalaf)",
-        "Bonfire and Dunckel Gym: Open til 11:30PM",
+        "10PM - 11:30PM: Bonfire & Dunckel Gym",
       ],
     },
     {
@@ -96,7 +96,7 @@ export const Schedules = {
         "7PM: Dinner - Cougar Den",
         "8:30PM - 9:15PM: Praise and Worship - Band Room",
         "9:15PM - 10PM: First Session (Leaders: Pastor Adam / Pastor Khalaf)",
-        "Bonfire and Dunckel Gym: Open til 11:30PM",
+        "10pm - 11:30pm: Bonfire and Dunckel Gym",
       ],
     },
     {
