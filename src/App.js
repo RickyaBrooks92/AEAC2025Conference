@@ -7,6 +7,7 @@ import {
   Music,
   ExternalLink,
   FileText,
+  Camera,
 } from "lucide-react";
 import map from "./images/Map.png";
 
@@ -549,24 +550,41 @@ const ChurchConferenceApp = () => {
               Conference Verse
             </h3>
             <div className="text-slate-600 leading-relaxed">
-              <p className="mb-4 font-medium text-lg">
+              <p className="mb-4 font-medium">
                 "That I may know Him and the power of His resurrection, and the
                 fellowship of His sufferings, being conformed to His death"
               </p>
-              <p className="text-blue-500 font-medium mb-4 text-lg">
-                Philippians 3:10
-              </p>
-              <p className="text-right mb-2 text-lg" dir="rtl">
+              <p className="text-blue-500 font-medium mb-4">Philippians 3:10</p>
+              <p className="text-right mb-2" dir="rtl">
                 "لأَعْرِفَهُ، وَقُوَّةَ قِيَامَتِهِ، وَشَرِكَةَ آلاَمِهِ،
                 مُتَشَبِّهاً بِمَوْتِهِ"
               </p>
-              <p
-                className="text-blue-500 font-medium text-right text-lg"
-                dir="rtl"
-              >
+              <p className="text-blue-500 font-medium text-right" dir="rtl">
                 فيلبي ٣: ١٠
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Photo Upload Link */}
+        <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 border border-orange-100/50 shadow-sm mb-6">
+          <div className="text-center">
+            <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <Camera className="w-6 h-6 text-orange-600" />
+            </div>
+            <h3 className="text-lg font-medium text-orange-700 mb-4">
+              Upload your photos from the conference here!
+            </h3>
+            <a
+              href="https://photos.app.goo.gl/NGWrcGTBua6zVwcz5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 shadow-sm"
+            >
+              <Camera className="w-5 h-5 mr-2 flex-shrink-0" />
+              <span>Upload Photos</span>
+              <ExternalLink className="w-4 h-4 ml-2 flex-shrink-0" />
+            </a>
           </div>
         </div>
 
