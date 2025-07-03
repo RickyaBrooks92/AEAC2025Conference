@@ -113,7 +113,7 @@ export default function EnglishHomePage({ onBack }) {
           </div>
         </div>
 
-        {/* Spotify Link */}
+        {/* Spotify Linkl */}
         {(activeTab === "Junior High" || activeTab === "Young Adults") && (
           <div className="mb-6">
             <a
